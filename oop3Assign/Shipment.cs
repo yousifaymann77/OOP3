@@ -12,7 +12,7 @@ namespace oop3Assign
         private decimal deliveryFee;
         public decimal ExtraPackingWeight { get; set; }
 
-        public string Destination { get; set; }
+        
 
 
         public Shipment(string trackingCode)
@@ -21,17 +21,15 @@ namespace oop3Assign
             this.description = "Unknown";
             this.weight = 1;
             this.deliveryFee = 50;
-            this.Destination = "Undefined";
 
         }
 
-        public Shipment(string trackingCode, string description, decimal weight, decimal deliveryFee, string destination)
+        public Shipment(string trackingCode, string description, decimal weight, decimal deliveryFee)
         {
             this.TrackingCode = trackingCode;
             this.Description = description;
             this.Weight = weight;
             this.DeliveryFee = deliveryFee;
-            this.Destination = destination;
         }
         public string TrackingCode
         {
@@ -109,7 +107,7 @@ namespace oop3Assign
         }
         public virtual string PrintShipment()
         {
-            return $"Tracking Code: {trackingCode}, Description: {description}, Weight: {weight} kg, Delivery Fee: ${deliveryFee}, Destination: {Destination}, Estimated Cost: ${EstimatedCost}";
+            return $"Tracking Code: {trackingCode}, Description: {description}, Weight: {weight} kg, Delivery Fee: ${deliveryFee}, Estimated Cost: ${EstimatedCost}";
         }
 
         #region part02 Q1 Shipment class Update

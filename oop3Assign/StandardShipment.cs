@@ -6,14 +6,16 @@ namespace oop3Assign
 {
     internal class StandardShipment :Shipment
     {
-        public StandardShipment(string trackingCode, string description, decimal deliveryFee, decimal weight, string destinantion)
-          : base(trackingCode, description, deliveryFee, weight, destinantion)
+        public StandardShipment(string trackingCode, string description, decimal deliveryFee, decimal weight)
+          : base(trackingCode, description, deliveryFee, weight)
         {
         }
 
+        #region part02 Q 4 override Print Shipment
         public override string PrintShipment()
         {
             return base.PrintShipment();
-        }
+        } 
+        #endregion
     }
 }

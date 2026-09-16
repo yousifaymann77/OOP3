@@ -6,8 +6,8 @@ namespace oop3Assign
 {
     internal class ExpressShipment : Shipment
     {
-        public ExpressShipment(string trackingCode, string description, decimal deliveryFee, decimal weight, string destinantion, decimal extraFee)
-           : base(trackingCode, description, deliveryFee, weight, destinantion)
+        public ExpressShipment(string trackingCode, string description, decimal deliveryFee, decimal weight,   decimal extraFee)
+           : base(trackingCode, description, deliveryFee, weight )
         {
             this.extraFee = extraFee;
         }
@@ -37,12 +37,14 @@ namespace oop3Assign
 
             }
 
-        } 
+        }
         #endregion
+        #region part02 Q 4 override Print Shipment
         public override string PrintShipment()
         {
             return base.PrintShipment();
             Console.WriteLine($"ExtraFee : {extraFee}");
-        }
+        } 
+        #endregion
     }
 }
