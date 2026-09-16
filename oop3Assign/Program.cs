@@ -17,6 +17,11 @@
             #region Part01 Q2 a)What is the purpose of the sealed keyword when applied to a class?
             // It ensures That the inheritance Chain stops at this class and no any class can inherit from it so no more extending from this class
             #endregion
+
+            #region Part01 Q2 b) What is the difference between a sealed class and a sealed method?
+            // Sealed class can not be inherited from it and the Sealed keyword is applied on the whole class
+            // Sealed Method can not be overriden 
+            #endregion
         }
     }
 }
