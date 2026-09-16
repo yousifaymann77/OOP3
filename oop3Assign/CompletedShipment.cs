@@ -4,10 +4,12 @@ using System.Text;
 
 namespace oop3Assign
 {
-    internal class CompletedShipment : Shipment
+    #region part02 Q8 seales Class Completed Shipment
+    internal sealed  class CompletedShipment : Shipment
     {
-        public CompletedShipment(string trackingCode, string description, decimal weight, decimal deliveryFee, string destination) : base(trackingCode, description, weight, deliveryFee, destination)
+        public CompletedShipment(string trackingCode, string description, decimal weight, decimal deliveryFee ) : base(trackingCode, description, weight, deliveryFee)
         {
         }
-    }
+    } 
+    #endregion
 }
