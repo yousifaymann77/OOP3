@@ -28,6 +28,7 @@ namespace oop3Assign
                 }
             }
         }
+        #region part02 Q3 
         public override decimal EstimatedCost
         {
             get
@@ -36,7 +37,8 @@ namespace oop3Assign
 
             }
 
-        }
+        } 
+        #endregion
         public override string PrintShipment()
         {
             return base.PrintShipment();
