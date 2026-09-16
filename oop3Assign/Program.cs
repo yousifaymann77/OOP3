@@ -13,6 +13,10 @@
             // Static binding is performed By the compiler at the compile time and is decided by the Refrence type 
             // Dynamic Binding is performed By the CLR at the Runtime and is decided by the Actual object in Memory 
             #endregion
+
+            #region Part01 Q2 a)What is the purpose of the sealed keyword when applied to a class?
+            // It ensures That the inheritance Chain stops at this class and no any class can inherit from it so no more extending from this class
+            #endregion
         }
     }
 }
