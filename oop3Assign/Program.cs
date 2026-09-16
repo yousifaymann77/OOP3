@@ -22,6 +22,10 @@
             // Sealed class can not be inherited from it and the Sealed keyword is applied on the whole class
             // Sealed Method can not be overriden 
             #endregion
+
+            #region Part01 Q2 c) Can a sealed method be overridden? Why?
+            // No , Because the Sealed keyword prevents any class from overriding the sealed Method
+            #endregion
         }
     }
 }
