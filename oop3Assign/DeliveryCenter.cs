@@ -11,7 +11,7 @@ namespace oop3Assign
         public string CenterName { get; set; }
 
         #region part02 Q5 
-        public Driver driver { get; set; } 
+        public Driver Driver { get; set; } 
         #endregion
 
         public DeliveryCenter()
@@ -91,7 +91,7 @@ namespace oop3Assign
             {
                 if (shipment != null)
                 {
-                    shipment.PrintShipment();
+                    Console.WriteLine(shipment.PrintShipment());
                 }
             } 
             #endregion

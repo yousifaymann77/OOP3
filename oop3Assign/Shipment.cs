@@ -108,7 +108,11 @@ namespace oop3Assign
         }
         public virtual string PrintShipment()
         {
-            return $"Tracking Code: {trackingCode}, Description: {description}, Weight: {weight} kg, Delivery Fee: ${deliveryFee}, Estimated Cost: ${EstimatedCost}";
+            return $"Tracking Code: {trackingCode},\n" +
+                $" Description: {description},\n" +
+                $" Weight: {weight} kg,\n" +
+                $" Delivery Fee: ${deliveryFee},\n" +
+                $" Estimated Cost: ${EstimatedCost}";
         }
 
         #region part02 Q1 Shipment class Update
@@ -123,7 +127,7 @@ namespace oop3Assign
         public void UpdateWeight(decimal weight, decimal extraWeight)
         {
             if (extraWeight >= 0)
-                weight += extraWeight;
+                this.weight = weight + extraWeight;
         } 
         #endregion
     }

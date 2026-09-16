@@ -43,8 +43,7 @@ namespace oop3Assign
         public override string PrintShipment()
         {
             Console.WriteLine("---Express Shipment---");
-            return base.PrintShipment();
-            Console.WriteLine($"ExtraFee : {extraFee}");
+            return base.PrintShipment() + $"\n ExtraFee : {extraFee}";
         } 
         #endregion
     }

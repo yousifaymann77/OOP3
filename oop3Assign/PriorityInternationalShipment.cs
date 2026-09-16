@@ -6,8 +6,8 @@ namespace oop3Assign
 {
     internal class PriorityInternationalShipment : InternationalShipment
     {
-        public PriorityInternationalShipment(string trackingCode, string description, decimal deliveryFee, decimal weight, string destinationCountry, decimal customFee, string destination)
-            : base(trackingCode, description, deliveryFee, weight, destination , customFee , destinationCountry)
+        public PriorityInternationalShipment(string trackingCode, string description, decimal deliveryFee, decimal weight, string destinationCountry, decimal customFee)
+            : base(trackingCode, description, deliveryFee, weight , destinationCountry, customFee)
         {
         }
 

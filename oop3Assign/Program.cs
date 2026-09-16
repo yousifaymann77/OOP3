@@ -26,6 +26,62 @@
             #region Part01 Q2 c) Can a sealed method be overridden? Why?
             // No , Because the Sealed keyword prevents any class from overriding the sealed Method
             #endregion
+
+
+            #region Part02 Q10 
+            // a) Create a Driver 
+            Driver driver = new Driver(123, "Yousef Ayman ", "010640");
+
+            // b)create a Delivery Center 
+            DeliveryCenter deliveryCenter = new DeliveryCenter();
+
+            // c) Assign the Driver to the center
+            deliveryCenter.Driver = driver;
+
+            // d) standard Shipment
+            StandardShipment standardShipment = new StandardShipment("SH00H", "Laptop", 150, 7);
+
+            // e) Express Shipment
+            ExpressShipment expressShipment = new ExpressShipment("SH01H", "Shoes", 750, 12, 250);
+
+            // f) International Shipment
+            InternationalShipment internationalShipment = new InternationalShipment("SH11H", "PC", 1000, 23, "Belgium", 500);
+
+            // g) 
+            deliveryCenter.AddShipment(standardShipment);
+            deliveryCenter.AddShipment(expressShipment);
+            deliveryCenter.AddShipment(internationalShipment);
+
+            // h)
+            Console.WriteLine("----Print All The Shipments----");
+            deliveryCenter.PrintAllShipments();
+
+            // i) 
+            Console.WriteLine("Printing Using DeliveryHelper...");
+            Console.WriteLine();
+
+            DeliveryHelper.PrintShipmentDetails(standardShipment);
+            DeliveryHelper.PrintShipmentDetails(expressShipment);
+            DeliveryHelper.PrintShipmentDetails(internationalShipment);
+
+            // j)
+            Console.WriteLine("----");
+            Console.WriteLine("Updating weight .....");
+            standardShipment.UpdateWeight(10);
+            Console.WriteLine($"Updated weight = {standardShipment.Weight}");
+
+            standardShipment.UpdateWeight(standardShipment.Weight, 7);
+            Console.WriteLine($"Updated weight After the Additional weight : {standardShipment.Weight}");
+
+            // k) 
+            Shipment[] shipments = { standardShipment, expressShipment, internationalShipment };
+            foreach (Shipment shipment in shipments)
+            {
+                shipment.PrintShipment();
+                Console.WriteLine("------------------");
+            }
+
+            #endregion
         }
     }
 }

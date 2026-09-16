@@ -9,7 +9,7 @@ namespace oop3Assign
         private string destinationCountry = default!;
         private decimal customFee;
 
-        public InternationalShipment(string trackingCode, string description, decimal deliveryFee, decimal weight, string destinationCountry, decimal customFee, string destination)
+        public InternationalShipment(string trackingCode, string description, decimal deliveryFee, decimal weight, string destinationCountry, decimal customFee)
             : base(trackingCode, description, deliveryFee, weight)
         {
             this.customFee = customFee;
@@ -47,9 +47,8 @@ namespace oop3Assign
         public override string PrintShipment()
         {
             Console.WriteLine("---International Shipment---");
-            return base.PrintShipment();
-            Console.WriteLine($"Destination country : {destinationCountry}");
-            Console.WriteLine($"CustomFee : {customFee}");
+            return $"{base.PrintShipment()}\n Destination country : {destinationCountry} \n CustomFee : {customFee}";
+           
         }
 
         #endregion
