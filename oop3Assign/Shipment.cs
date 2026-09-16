@@ -10,6 +10,7 @@ namespace oop3Assign
         private string description;
         private decimal weight;
         private decimal deliveryFee;
+        public decimal ExtraPackingWeight { get; set; }
 
         public string Destination { get; set; }
 
@@ -91,16 +92,6 @@ namespace oop3Assign
                 }
             }
         }
-        public  decimal EstimatedCost
-        {
-            get
-            {
-                return deliveryFee + (weight * 5);
-            }
-        }
-
-
-
         public void UpdateDeliveryFee(decimal newFee)
         {
             if (newFee > 0)
@@ -108,10 +99,33 @@ namespace oop3Assign
                 deliveryFee = newFee;
             }
         }
-
-        public string PrintShipment()
+       
+        public virtual decimal EstimatedCost
+        {
+            get
+            {
+                return deliveryFee + (weight * 5);
+            }
+        }
+        public virtual string PrintShipment()
         {
             return $"Tracking Code: {trackingCode}, Description: {description}, Weight: {weight} kg, Delivery Fee: ${deliveryFee}, Destination: {Destination}, Estimated Cost: ${EstimatedCost}";
         }
+
+        #region part02 Q1 Shipment class Update
+        public void UpdateWeight(decimal weight)
+        {
+            if (weight > 0)
+            {
+                this.weight = weight;
+            }
+
+        }
+        public void UpdateWeight(decimal weight, decimal extraWeight)
+        {
+            if (extraWeight >= 0)
+                weight += extraWeight;
+        } 
+        #endregion
     }
 }
