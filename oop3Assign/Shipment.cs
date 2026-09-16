@@ -12,8 +12,9 @@ namespace oop3Assign
         private decimal deliveryFee;
         public decimal ExtraPackingWeight { get; set; }
 
-        
-
+        #region part02 Q5 
+        public DeliveryAddress Address { get; set; } 
+        #endregion
 
         public Shipment(string trackingCode)
         {

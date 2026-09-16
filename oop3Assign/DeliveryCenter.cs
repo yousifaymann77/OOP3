@@ -10,6 +10,10 @@ namespace oop3Assign
 
         public string CenterName { get; set; }
 
+        #region part02 Q5 
+        public Driver driver { get; set; } 
+        #endregion
+
         public DeliveryCenter()
         {
             this.shipments = new Shipment[20];
@@ -97,7 +101,6 @@ namespace oop3Assign
                         Console.WriteLine($"Description   : {standard.Description}");
                         Console.WriteLine($"Weight        : {standard.Weight} KG");
                         Console.WriteLine($"Delivery Fee  : {standard.DeliveryFee} EGP");
-                        Console.WriteLine($"Destination   : {standard.Destination}");
                         Console.WriteLine($"Estimated Cost: {standard.EstimatedCost}");
                     }
 

@@ -10,7 +10,7 @@ namespace oop3Assign
         private decimal customFee;
 
         public InternationalShipment(string trackingCode, string description, decimal deliveryFee, decimal weight, string destinationCountry, decimal customFee, string destination)
-            : base(trackingCode, description, deliveryFee, weight, destination)
+            : base(trackingCode, description, deliveryFee, weight)
         {
             this.customFee = customFee;
             this.destinationCountry = destinationCountry;
