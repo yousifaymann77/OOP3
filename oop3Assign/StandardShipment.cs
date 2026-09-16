@@ -10,5 +10,10 @@ namespace oop3Assign
           : base(trackingCode, description, deliveryFee, weight, destinantion)
         {
         }
+
+        public override string PrintShipment()
+        {
+            return base.PrintShipment();
+        }
     }
 }

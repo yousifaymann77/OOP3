@@ -40,5 +40,18 @@ namespace oop3Assign
         }
 
         public override decimal EstimatedCost => base.EstimatedCost + customFee;
+
+        public override string PrintShipment()
+        {
+            return base.PrintShipment();
+            Console.WriteLine($"Destination country : {destinationCountry}");
+            Console.WriteLine($"CustomFee : {customFee}");
+        }
+
+        public virtual void GenerateCustomReport()
+        {
+            Console.WriteLine($"CustomFee : {customFee}");
+            Console.WriteLine($"Destination Country : {destinationCountry}");
+        }
     }
 }

@@ -37,5 +37,10 @@ namespace oop3Assign
             }
 
         }
+        public override string PrintShipment()
+        {
+            return base.PrintShipment();
+            Console.WriteLine($"ExtraFee : {extraFee}");
+        }
     }
 }
