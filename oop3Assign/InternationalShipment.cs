@@ -53,10 +53,12 @@ namespace oop3Assign
         }
 
         #endregion
+        #region part02 Q9 
         public virtual void GenerateCustomReport()
         {
             Console.WriteLine($"CustomFee : {customFee}");
             Console.WriteLine($"Destination Country : {destinationCountry}");
-        }
+        } 
+        #endregion
     }
 }
