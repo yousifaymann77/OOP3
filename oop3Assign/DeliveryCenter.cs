@@ -86,54 +86,15 @@ namespace oop3Assign
 
         public void PrintAllShipments()
         {
-            for (int i = 0; i < shipments.Length; i++)
+            #region part02 Q6 Delivery Center Modification
+            foreach (Shipment shipment in shipments)
             {
-                if (shipments[i] != null)
+                if (shipment != null)
                 {
-                    Console.WriteLine("----------------------------------------");
-
-                    if (shipments[i] is StandardShipment standard)
-                    {
-                        Console.WriteLine("Standard Shipment");
-                        Console.WriteLine();
-
-                        Console.WriteLine($"Tracking Code : {standard.TrackingCode}");
-                        Console.WriteLine($"Description   : {standard.Description}");
-                        Console.WriteLine($"Weight        : {standard.Weight} KG");
-                        Console.WriteLine($"Delivery Fee  : {standard.DeliveryFee} EGP");
-                        Console.WriteLine($"Estimated Cost: {standard.EstimatedCost}");
-                    }
-
-                    else if (shipments[i] is ExpressShipment express)
-                    {
-                        Console.WriteLine("Express Shipment");
-                        Console.WriteLine();
-
-                        Console.WriteLine($"Tracking Code : {express.TrackingCode}");
-                        Console.WriteLine($"Description   : {express.Description}");
-                        Console.WriteLine($"Weight        : {express.Weight} KG");
-                        Console.WriteLine($"Delivery Fee  : {express.DeliveryFee} EGP");
-                        Console.WriteLine($"Extra Fee     : {express.ExtraFee} EGP");
-                        Console.WriteLine($"Estimated Cost: {express.EstimatedCost}");
-                    }
-
-                    else if (shipments[i] is InternationalShipment international)
-                    {
-                        Console.WriteLine("International Shipment");
-                        Console.WriteLine();
-
-                        Console.WriteLine($"Tracking Code      : {international.TrackingCode}");
-                        Console.WriteLine($"Description        : {international.Description}");
-                        Console.WriteLine($"Weight             : {international.Weight} KG");
-                        Console.WriteLine($"Delivery Fee       : {international.DeliveryFee} EGP");
-                        Console.WriteLine($"Destination Country: {international.DestinationCountry}");
-                        Console.WriteLine($"Customs Fee        : {international.CustomFee} EGP");
-                        Console.WriteLine($"Estimated Cost     : {international.EstimatedCost}");
-                    }
-
-                    Console.WriteLine("----------------------------------------");
+                    shipment.PrintShipment();
                 }
-            }
+            } 
+            #endregion
         }
     }
 }

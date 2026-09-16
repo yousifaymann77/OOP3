@@ -42,6 +42,7 @@ namespace oop3Assign
         #region part02 Q 4 override Print Shipment
         public override string PrintShipment()
         {
+            Console.WriteLine("---Express Shipment---");
             return base.PrintShipment();
             Console.WriteLine($"ExtraFee : {extraFee}");
         } 

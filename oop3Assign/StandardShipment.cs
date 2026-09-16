@@ -14,6 +14,7 @@ namespace oop3Assign
         #region part02 Q 4 override Print Shipment
         public override string PrintShipment()
         {
+            Console.WriteLine("---Standard Shipment---");
             return base.PrintShipment();
         } 
         #endregion
